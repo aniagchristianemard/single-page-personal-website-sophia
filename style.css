@@ -1,0 +1,66 @@
+.name-font {
+    font-family: "Dancing Script", cursive !important;
+    font-optical-sizing: auto;
+    font-style: normal;
+}
+
+header {
+    color: white;
+    padding: 1rem 0;
+    /* position: fixed; */
+    width: 100%;
+    background-color: #251f44;
+
+}
+
+main {
+    background-color: #251f44;
+    width: 100%;
+    height: 100vh;
+}
+
+.gallery {
+    --s: 150px;
+    /* control the size */
+    --g: 10px;
+    /* control the gap */
+    --f: 1.5;
+    /* control the scale factor */
+
+    display: grid;
+    gap: var(--g);
+    width: calc(3*var(--s) + 2*var(--g));
+    aspect-ratio: 1;
+    grid-template-columns: repeat(3, auto);
+}
+
+.gallery>img {
+    width: 0;
+    height: 0;
+    min-height: 100%;
+    min-width: 100%;
+    object-fit: cover;
+    cursor: pointer;
+    filter: grayscale(80%);
+    transition: .35s linear;
+}
+
+.gallery img:hover {
+    filter: grayscale(0);
+    width: calc(var(--s)*var(--f));
+    height: calc(var(--s)*var(--f));
+}
+
+.portfolio-section {
+    background-color: #f4f4f5;
+    height: 100vh;
+}
+
+.contact-section {
+    background-color: #ff59381a;
+    height: 100vh;
+}
+
+.img-icons {
+    width: 40px;
+}
